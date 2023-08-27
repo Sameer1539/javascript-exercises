@@ -2,7 +2,10 @@ const palindromes = function (str) {
     const lastChar = str.length - 1;
     let reversed = "";
     for (let i = lastChar; i >= 0; i--){
-        reversed += str[i];
+        let upperCaseIndex = str[i].toUpperCase()
+        if (upperCaseIndex >= 'A' && upperCaseIndex <= 'Z') {
+            reversed += str[i];
+        }
     }
     if (reversed = str) {
         return true;
